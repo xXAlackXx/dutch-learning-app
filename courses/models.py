@@ -58,3 +58,6 @@ class LessonVocabulary(models.Model):
     
     class Meta:
         verbose_name_plural = "Lesson Vocabularies"
+        unique_together = ('lesson', 'vocabulary')
+        
+   
