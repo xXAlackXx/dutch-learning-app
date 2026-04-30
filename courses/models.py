@@ -58,6 +58,7 @@ class LessonVocabulary(models.Model):
     
     class Meta:
         verbose_name_plural = "Lesson Vocabularies"
-        unique_together = ('lesson', 'vocabulary')
+        constraints = [
+            models.UniqueConstraint(fields=['lesson', 'vocabulary'], name='unique_lesson_vocabulary')
+        ]
         
-   
